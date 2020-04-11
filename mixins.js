@@ -15,6 +15,7 @@ Profile.prototype ={
   
   updateProfile : function() {
     Object.assign(this, this.getProfileUpdate())
+    console.log(this);
     return this;
   },
   
@@ -34,7 +35,7 @@ Profile.prototype ={
 
 let user = new Profile('George','','Charlotte', 'NC', '28209', 'none' );
 
-// eventually fix button to select user
-// btn.addEventListener('click', function(){
-//   (input_input.value).updateProfile();
-// })
+
+btn.addEventListener('click', function(){
+  user.updateProfile();
+})
